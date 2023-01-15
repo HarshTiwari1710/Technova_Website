@@ -1,0 +1,135 @@
+@mixin addError() {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(20px);
+  display: block;
+  font-size: 0.9rem;
+  color: #eb4747;
+  font-weight: 500;
+}
+
+.form-sec {
+  background-color: #fafafa;
+}
+.container {
+  padding: 2%;
+  .row {
+    border-radius: 10px;
+    background-color: #ffff;
+  }
+  img {
+    margin-top: 100px;
+  }
+  .form {
+    padding: 0 20px;
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+    }
+    small {
+      color: hsl(233, 8%, 62%);
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      color: #263c47;
+    }
+    .form-container {
+      padding: 20px 0;
+      form {
+        width: 100%;
+      }
+      .form-item {
+        margin: 0 0 30px;
+        position: relative;
+        .form-control:focus {
+          box-shadow: none;
+        }
+        input {
+          width: 80%;
+          padding: 5px 5px;
+          border-bottom: 2px solid grey !important;
+          border: 0;
+          padding-left: 0;
+          transition: all 0.3s ease-in-out;
+          &:focus {
+            border-bottom: 2px solid rgba(81, 203, 238, 1) !important;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        select {
+          background-color: #ffff;
+          width: 80%;
+          border-bottom: 2px solid grey !important;
+          border: 0;
+          padding: 5px 5px;
+          padding-left: 0;
+          border-radius: 0;
+          transition: all 0.3s ease-in-out;
+          &:focus {
+            border-bottom: 2px solid rgba(81, 203, 238, 1) !important;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        label {
+          display: block;
+          color: #53597b;
+        }
+        &.error:after {
+          content: "Field cannot be empty";
+          @include addError();
+        }
+        &.validation:after {
+          content: "It should be a number";
+          @include addError();
+        }
+        &.exceed:after {
+          content: "Age should be less than 3 characters long";
+          @include addError();
+        }
+        &.limit:after {
+          content: "It should be a 10 digit number";
+          @include addError();
+        }
+      }
+      button {
+        background: #2196f3;
+        box-shadow: 0px 10px 20px -10px #1376c5;
+        border: 0;
+        padding: 8px 15px;
+        color: #ffff;
+        font-weight: 500;
+        border-radius: 5px;
+        margin: 10px 0;
+        transition: all 0.3s ease-in;
+      }
+      button:hover {
+        background-color: #3498db;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    padding: auto;
+    .form {
+      .form-container {
+        form {
+          .form-item {
+            input {
+              width: 100%;
+            }
+            select {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
