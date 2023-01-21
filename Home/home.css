@@ -143,7 +143,7 @@ button:active {
     order: 1;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 410px) {
   .home-page .title-content h2 {
     font-size: 2.5rem;
   }
@@ -312,7 +312,7 @@ button:active {
     grid-template-columns: auto auto;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   .info {
     padding-bottom: 10%;
   }

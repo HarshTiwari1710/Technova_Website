@@ -57,7 +57,7 @@ function listenEvent() {
       let target = +club.getAttribute("data-attribute");
       const current = +club.innerText;
 
-      const increment = +target / 5000;
+      const increment = +target / 40;
       if (current < target) {
         club.innerText = `${Math.ceil(increment) + current}`;
         setTimeout(getData, 50);
