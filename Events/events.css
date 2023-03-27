@@ -97,7 +97,7 @@
 }
 .achievments-slider {
   padding: 3% 8%;
-  background-color: #ecfcff;
+  background-color: rgba(238, 238, 238, 0.1568627451);
   text-align: center;
 }
 .achievments-slider .heading {
@@ -119,7 +119,6 @@
   width: 50px;
 }
 .achievments-slider .carousel-item:nth-child(1) span:nth-child(1) {
-  color: #1380d0;
   margin: 0;
 }
 .achievments-slider .carousel-item:nth-child(1) .image img {
@@ -129,14 +128,11 @@
   margin: 0;
   color: #63b867;
 }
-.achievments-slider .carousel-item:nth-child(3) span:nth-child(1) {
-  color: #000000;
-}
 .achievments-slider .carousel-item:nth-child(3) span:nth-child(2) {
   color: #ff9900;
 }
 .achievments-slider .slider-content {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .achievments-slider .slider-content .content {
   margin-top: 100px;
@@ -260,9 +256,10 @@
 
 .register-now {
   display: inline-block;
-  background: #2196f3;
+  background: #666666;
   border: 0;
   font-weight: 600;
+  cursor: not-allowed;
   border-radius: 15px;
   color: white;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
@@ -334,4 +331,61 @@
     transform: translateY(0);
     margin: 10px 0;
   }
+}
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-image {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.slider-prev,
+.slider-next {
+  background-color: #06c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: #024;
 }/*# sourceMappingURL=events.css.map */

@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Nunito+Sans:wght@300;600;800&family=Roboto+Mono:wght@400;600;700&display=swap");
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes blink {
   0% {
     opacity: 1;
@@ -63,12 +52,10 @@ button:active {
   background-color: #ccc;
   margin-left: 0.1rem;
   width: 3px;
-  -webkit-animation: blink 0.7s infinite;
   animation: blink 1s infinite;
 }
 .home-page .title-content h2.typing {
-  -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 .home-page .title-content p {
   width: 80%;
@@ -105,6 +92,7 @@ button:active {
 .home-page img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 90%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -149,6 +137,9 @@ button:active {
   }
   .home-page .title-content .video {
     display: block;
+  }
+  .home-page img {
+    width: 100%;
   }
 }
 .vm {
@@ -271,7 +262,7 @@ button:active {
   margin-bottom: 30px;
 }
 .info .info-content p {
-  text-align: left;
+  text-align: justify;
 }
 .info .info-content .info-grid {
   display: grid;

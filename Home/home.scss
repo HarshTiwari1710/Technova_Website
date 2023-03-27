@@ -166,6 +166,7 @@ button:active {
 
   img {
     object-fit: cover;
+    width: 90%;
   }
 }
 
@@ -223,6 +224,9 @@ button:active {
       .video {
         display: block;
       }
+    }
+    img {
+      width: 100%;
     }
   }
 }
@@ -317,7 +321,7 @@ button:active {
       margin-bottom: 30px;
     }
     p {
-      text-align: left;
+      text-align: justify;
     }
     .info-grid {
       display: grid;

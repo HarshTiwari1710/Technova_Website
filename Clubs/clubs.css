@@ -1,9 +1,6 @@
 .home {
-  padding: 2% 8%;
+  padding: 3% 8%;
   background-image: linear-gradient(#ffffff, rgba(236, 252, 255, 0.5529411765));
-}
-.home .heading-home {
-  margin-top: 80px;
 }
 .home .heading-home h1 {
   color: #00add8;
@@ -14,13 +11,24 @@
 .home .heading-home h2 {
   font-size: 3rem;
   font-weight: 700;
+  display: inline-block;
 }
 .home .heading-home p {
   width: 80%;
-  margin: 20px 0;
+  margin: 0px 0;
   font-size: 1rem;
   padding: 0 5px;
   font-weight: 600;
+}
+.home .heading-home .title-heading {
+  position: relative;
+}
+.home .heading-home img {
+  width: 110px;
+  margin-bottom: 10px;
+}
+.home .heading-home .game-drifters-logo {
+  width: 80px;
 }
 .home .buttons {
   margin-top: 50px;
@@ -73,6 +81,15 @@
   .home .heading-home p {
     width: 100%;
   }
+  .home .heading-home .title-heading {
+    margin: auto;
+  }
+  .home .heading-home .title-heading img {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    margin: auto;
+  }
   .home .row {
     display: flex;
     flex-direction: column;
@@ -98,7 +115,7 @@
   }
 }
 .info {
-  padding: 3% 8% 0;
+  padding: 3% 8%;
 }
 .info .heading {
   margin-bottom: 50px;
@@ -122,7 +139,7 @@
   margin-bottom: 30px;
 }
 .info .info-content p {
-  text-align: left;
+  text-align: justify;
   width: 80%;
 }
 .info .info-content .info-grid {
@@ -284,7 +301,7 @@
   color: grey;
 }
 .team .members-grid .member .designation i {
-  margin: 15px 5px 0;
+  margin: 10px 5px 0;
   font-size: 1.2rem;
 }
 .team .members-grid .member .profile {
@@ -307,7 +324,9 @@
 }
 .team .members-grid .member img {
   border-radius: 50%;
-  width: 120px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  width: auto;
   height: 120px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -353,4 +372,159 @@
     width: 100%;
     margin: auto;
   }
+}
+.achievments-slider {
+  padding: 3% 8%;
+  background-color: rgba(238, 238, 238, 0.1568627451);
+  text-align: center;
+}
+.achievments-slider .heading {
+  margin-bottom: 50px;
+}
+.achievments-slider .heading h2 {
+  color: #00add8;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.achievments-slider .heading h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.achievments-slider .achievment-slider {
+  text-align: left;
+}
+.achievments-slider .carousel-indicators button {
+  width: 50px;
+}
+.achievments-slider .carousel-item:nth-child(1) span:nth-child(1) {
+  margin: 0;
+}
+.achievments-slider .carousel-item:nth-child(1) .image img {
+  width: 100%;
+}
+.achievments-slider .carousel-item:nth-child(1) span:nth-child(2) {
+  margin: 0;
+  color: #63b867;
+}
+.achievments-slider .slider-content {
+  margin-bottom: 80px;
+}
+.achievments-slider .slider-content .content {
+  margin-top: 80px;
+}
+.achievments-slider .slider-content .content span {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.achievments-slider .slider-content .content .color:first-child {
+  color: #428ff4;
+}
+.achievments-slider .slider-content .content .color:nth-child(2) {
+  color: #ea4335;
+}
+.achievments-slider .slider-content .content .color:nth-child(3) {
+  color: #fbbc05;
+}
+.achievments-slider .slider-content .content .color:nth-child(4) {
+  color: #428ff4;
+}
+.achievments-slider .slider-content .content .color:nth-child(5) {
+  color: #34a853;
+}
+.achievments-slider .slider-content .content .color:nth-child(6) {
+  color: #ea4335;
+}
+.achievments-slider .slider-content .content .color-grey {
+  color: #666666;
+  margin-left: 5px;
+}
+.achievments-slider .slider-content .content p {
+  margin: 20px 0 50px;
+  width: 80%;
+}
+.achievments-slider .slider-content .content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.achievments-slider .slider-content .image img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media only screen and (max-width: 900px) {
+  .achievments-slider .achievment-slider {
+    text-align: center;
+  }
+  .achievments-slider .achievment-slider .slider-content {
+    margin-bottom: 50px;
+  }
+  .achievments-slider .achievment-slider .slider-content .image img {
+    height: auto;
+    margin-top: 20px;
+  }
+  .achievments-slider .achievment-slider .slider-content .content {
+    margin-top: 0;
+  }
+  .achievments-slider .achievment-slider .slider-content .content p {
+    width: 100%;
+  }
+}
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-image {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.slider-prev,
+.slider-next {
+  background-color: #06c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: #024;
 }/*# sourceMappingURL=clubs.css.map */

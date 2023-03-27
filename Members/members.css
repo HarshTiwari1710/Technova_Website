@@ -40,10 +40,11 @@
   background-position-x: 40px;
 }
 .join .message p {
-  margin-bottom: 40px;
+  margin-bottom: auto;
   line-height: 1.7;
 }
 .join .message h4 {
+  margin-top: 15px;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
