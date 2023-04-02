@@ -27,11 +27,82 @@ button:active {
 
 /* Navigation Bar  */
 .home-page {
-  padding: 2% 8%;
+  padding: 3% 8%;
   color: #53597b;
   background-image: linear-gradient(#ffffff, rgba(236, 252, 255, 0.5529411765));
-  font-family: "Mulish", sans-serif;
   border: 0;
+}
+.home-page .heading-home h1 {
+  color: #00add8;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.home-page .heading-home h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+}
+.home-page .heading-home p {
+  width: 80%;
+  margin: 0px 0;
+  font-size: 1rem;
+  padding: 0 5px;
+  font-weight: 600;
+}
+.home-page .heading-home .title-heading {
+  position: relative;
+}
+.home-page .heading-home img {
+  width: 110px;
+  margin-bottom: 10px;
+}
+.home-page .heading-home .game-drifters-logo {
+  width: 80px;
+}
+.home-page .buttons {
+  margin-top: 50px;
+}
+.home-page .buttons a {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  border-radius: 20px;
+  margin: auto 0;
+  border: 0;
+  font-weight: 600;
+  background: #2196f3;
+  box-shadow: 0px 10px 20px -10px #1376c5;
+  transition: all 0.3s ease-in;
+  margin-right: 10px;
+}
+.home-page .buttons a:hover {
+  background-color: #3498db;
+  transition: 0.3s ease-in;
+}
+.home-page .buttons a {
+  font-weight: 600;
+}
+.home-page .buttons a img {
+  width: 35px;
+}
+.home-page .image img {
+  transform: translate(10%, -5%);
+  width: 500px;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-page .carousel-indicators button {
+  background-color: #1376c5 !important;
+  width: 50px;
+}
+.home-page .carousel-indicators .carousel-inner {
+  margin: 50px 0;
+}
+.home-page .home-slider {
+  margin-bottom: 55px;
 }
 .home-page .title-content {
   margin: 80px 0;
@@ -98,6 +169,61 @@ button:active {
 @media only screen and (max-width: 900px) {
   .home-page {
     text-align: center;
+  }
+  .home-page .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-page .carousel-indicators button {
+    width: 100px;
+    background-color: red;
+  }
+  .home-page .carousel-indicators .carousel-inner {
+    margin: 50px 0;
+  }
+  .home-page .carousel-control-prev {
+    transform: translateX(0);
+    display: none;
+  }
+  .home-page .carousel-control-next {
+    transform: translateX(0);
+    display: none;
+  }
+  .home-page .title {
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .home-page .home-slider {
+    margin-bottom: 55px;
+  }
+  .home-page .heading-home {
+    margin-top: 20px;
+  }
+  .home-page .heading-home h1 {
+    font-size: 1.4rem;
+  }
+  .home-page .heading-home h2 {
+    font-size: 2.5rem;
+  }
+  .home-page .heading-home p {
+    width: 100%;
+  }
+  .home-page .heading-home .title-heading {
+    margin: auto;
+  }
+  .home-page .heading-home .title-heading img {
+    display: block;
+    position: relative;
+    margin-top: 0;
+    margin: auto;
+  }
+  .home-page .image {
+    order: 1;
+  }
+  .home-page .image img {
+    transform: translate(0);
+    height: auto;
   }
   .home-page .title-content {
     margin: 30px 0;
