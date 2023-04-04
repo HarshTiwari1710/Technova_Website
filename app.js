@@ -73,7 +73,9 @@ function listenEvent() {
   });
 }
 
-const sliderContainer = document.querySelector(".slider-container");
+
+try {
+  const sliderContainer = document.querySelector(".slider-container");
 const sliderPrev = document.querySelector(".slider-prev");
 const sliderNext = document.querySelector(".slider-next");
 
@@ -129,4 +131,28 @@ sliderContainer.addEventListener("transitionend", () => {
     }, 10);
     currentSlide = slides.length - 1;
   }
+});
+
+  
+} catch (error) {
+  
+}
+
+
+const lazyImages = document.querySelectorAll('.lazy');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      const src = img.getAttribute('data-src');
+      img.setAttribute('src', src);
+      img.classList.remove('lazy');
+      observer.unobserve(img);
+    }
+  });
+});
+
+lazyImages.forEach(image => {
+  observer.observe(image);
 });
