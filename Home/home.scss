@@ -106,11 +106,78 @@ button:active {
 // HOME PAGE
 
 .home-page {
-  padding: 2% 8%;
+  padding: 3% 8%;
   color: $text;
   background-image: linear-gradient(#ffffff, #ecfcff8d);
-  font-family: "Mulish", sans-serif;
   border: 0;
+  .heading-home {
+    h1 {
+      color: $heading;
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+    p {
+      width: 80%;
+      margin: 0px 0;
+      font-size: 1rem;
+      padding: 0 5px;
+      font-weight: 600;
+    }
+    .title-heading {
+      position: relative;
+    }
+    img {
+      width: 110px;
+      margin-bottom: 10px;
+    }
+    .game-drifters-logo {
+      width: 80px;
+    }
+  }
+  .buttons {
+    margin-top: 50px;
+    a {
+      @include btns();
+      margin-right: 10px;
+    }
+    a:hover {
+      background-color: #3498db;
+      transition: 0.3s ease-in;
+    }
+    a {
+      font-weight: 600;
+      img {
+        width: 35px;
+      }
+    }
+  }
+  .image {
+    img {
+      transform: translate(10%, -5%);
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+
+  .carousel-indicators {
+    button {
+      background-color: #1376c5 !important;
+      width: 50px;
+    }
+    .carousel-inner {
+      margin: 50px 0;
+    }
+  }
+  .home-slider {
+    margin-bottom: 55px;
+  }
 
   .title-content {
     margin: 80px 0;
@@ -172,6 +239,71 @@ button:active {
 
 @media only screen and (max-width: 900px) {
   .home-page {
+    .row {
+      @include row-pos();
+    }
+    .carousel-indicators {
+      button {
+        width: 100px;
+        background-color: red;
+      }
+      .carousel-inner {
+        margin: 50px 0;
+      }
+    }
+
+    .carousel-control-prev {
+      transform: translateX(0);
+      display: none;
+    }
+    .carousel-control-next {
+      transform: translateX(0);
+      display: none;
+    }
+
+    .title {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2;
+      margin-bottom: 20px;
+    }
+    .home-slider {
+      margin-bottom: 55px;
+    }
+    .heading-home {
+      margin-top: 20px;
+      h1 {
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      p {
+        width: 100%;
+      }
+      .title-heading {
+        margin: auto;
+        img {
+          display: block;
+          position: relative;
+          margin-top: 0;
+          margin: auto;
+        }
+      }
+    }
+    .image {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+      img {
+        transform: translate(0);
+        height: auto;
+      }
+    }
     text-align: center;
     .title-content {
       margin: 30px 0;
